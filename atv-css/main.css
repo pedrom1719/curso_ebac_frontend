@@ -1,0 +1,245 @@
+*{
+    font-family: 'Poppins', sans-serif;
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    scroll-behavior: smooth;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+body > header{
+    background-color: #333;
+    color: #f2f2f2;
+
+    width: 100%;
+    padding: 0 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 0 18px 0;
+}
+
+body > header .container{
+    width: 100%;
+    max-width: 1400px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 25px;
+}
+
+body > header .container h1{
+    font-size: 28px;
+}
+
+body > header .container nav{
+    width: 50%;
+}
+
+body > header .container nav ul{
+    list-style-type: none;
+
+    width: 100%;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+body > header .container nav ul li{
+    width: 50%;
+    border-bottom: solid 5px transparent;
+
+    text-align: center;
+    padding: 25px 0;
+
+    transition: 0.3s ease-in-out;
+}
+
+body > header .container nav ul li:hover{
+    border-bottom:  solid 5px #717171;
+}
+
+body > header .container nav ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+/* CORES ESPORTES */
+.sports-section{
+    border-color: green;
+}
+
+.sports-section .news-container article img{
+    border-bottom: solid 6px green;
+}
+
+/* CORES ECONOMIA */
+.economy-section{
+    border-color: orange;
+}
+
+.economy-section .news-container article img{
+    border-bottom: solid 6px orange;
+}
+
+/* CORES ENTRETENIMENTO */
+.entertain-section{
+    border-color: red;
+}
+
+.entertain-section .news-container article img{
+    border-bottom: solid 6px red;
+}
+
+/* CORES TECNOLOGIA */
+.tech-section{
+    border-color: blue;
+}
+
+.tech-section .news-container article img{
+    border-bottom: solid 6px blue;
+}
+
+section{
+    border-top: solid 6px #ccc;
+    border-radius: 6px;
+    background-color: rgba(0, 0, 0, 0.07);
+
+    max-width: 1400px;
+    padding: 20px;
+    margin: 0 0 15px 0;
+}
+
+section h2{
+    font-size: 30px;
+    color: #333;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+
+    padding: 0 0 18px 5px;
+}
+
+section .news-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+section .news-container article{
+    background-color: #fff;
+    border-radius: 14px;
+
+    padding: 8px;
+    width: 24%;
+    max-width: 330px;
+
+    transition: 0.3s ease-in-out;
+}
+
+section .news-container article:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 50px 0 rgba(0, 0, 0, 0.1);
+
+    transform: translateY(-5px);
+}
+
+section .news-container article img{
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+
+    width: 100%;
+    height: 215px;
+    margin: 0 0 10px 0;
+}
+
+section .news-container article header{
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    margin: -65px 0 35px 0;
+    padding: 0 10px 0 0;
+}
+
+section .news-container article header time{
+    background-color: #fff;
+    border-radius: 50px;
+
+    font-size: 12px;
+    color: #808080;
+
+    padding: 5px 10px;
+}
+
+section .news-container article h3{
+    font-size: 16px;
+    padding: 0 15px;
+}
+
+section .news-container article p{
+    font-size: 14px;
+    padding: 0 15px;
+    margin: 10px 0 20px 0;
+}
+
+section .news-container article a{
+    text-decoration: none;
+    background: url('https://i.ibb.co/kQyHR4h/arrow-small-right.png'), #333;
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: 93% center;
+    border-radius: 0 0 10px 10px;
+
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+
+    width: 100%;
+    padding: 10px 15px;
+    display: inline-block;
+
+    transition: 0.3s ease-in-out;
+}
+
+.sports-section .news-container article a:hover{
+    background-color: green;
+    background-position: 95% center;
+    color: #f2f2f2;
+}
+
+.economy-section .news-container article a:hover{
+    background-color: orange;
+    background-position: 95% center;
+    color: #fff;
+}
+
+.entertain-section .news-container article a:hover{
+    background-color: red;
+    background-position: 95% center;
+    color: #f2f2f2;
+}
+
+.tech-section .news-container article a:hover{
+    background-color: blue;
+    background-position: 95% center;
+    color: #fff;
+}
