@@ -16,8 +16,8 @@ formButton.addEventListener('click', function(e){
     
         document.querySelector('#contentTable').innerHTML = fullTable;
     
-        // inputNome.value = "";
-        // inputTel.value = "";
+        inputNome.value = "";
+        inputTel.value = "";
     }else{
         alert('Preencha todos os campos corretamente.');
     }
