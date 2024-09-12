@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #fff;
+}
+
+.main-container{
+    background-color: #f2f2f2;
+
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container form{
+    width: 100%;
+    max-width: 700px;
+
+    display: flex;
+    justify-content: center;
+
+    margin: 0 0 20px 0;
+}
+
+.main-container form input{
+    background-color: #fff;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+
+    width: 90%;
+    max-width: 490px;
+
+    padding: 18px 30px;
+}
+
+.main-container form button{
+    background-color: #6a5aff;
+    border-radius: 100px;
+    border: none;
+    outline: none;
+
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 0 0 -58px;
+    transform: scale(0.9);
+
+    font-size: 30px;
+    color: #f2f2f2;
+
+    cursor: pointer;
+
+    transition: 0.3 ease-in-out;
+}
+
+.main-container form button i{
+    line-height: 0.5;
+}
+
+.main-container ul{
+    background-color: rgba(0, 0, 0, 0.04);
+    border-radius: 20px;
+    list-style: none;
+
+    width: 90%;
+    max-width: 500px;
+    height: 80vh;
+
+    padding: 15px;
+    position: relative;
+
+    overflow-y: auto;
+}
+
+.main-container ul li{
+    background-color: rgba(0, 0, 0, 0.04);
+    border-radius: 10px;
+    border-right: solid 10px transparent;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+
+    padding: 15px;
+    margin: 0 0 10px 0;
+
+    cursor: pointer;
+
+    transition: 0.3s ease-in-out;
+
+    &:hover{
+        border-right: solid 10px #ccc;
+        gap: 20px;
+    }
+}
+
+.main-container ul li i{
+    font-size: 20px;
+    line-height: 0;
+
+    opacity: 0.2;
+}
+
+.main-container ul li span{
+    font-size: 14px;
+}
+
+.main-container ul .crossed{
+    border-right: solid 10px #ccc !important;
+    opacity: 0.4 !important;
+
+    margin: 30px 0 10px 0;
+
+    position: relative;
+}
+
+.main-container ul .crossed:before{
+    content: '';
+
+    background-color: #333;
+    border-radius: 10px;
+
+    max-width: 300px;
+
+    display: block;
+    position: absolute;
+    left: calc(50% + 10px);
+    top: -16px;
+    transform: translateX(-50%);
+
+    width: 100%;
+    height: 2px;
+
+    opacity: 0.2;
+}
+
+.main-container ul > .crossed span{
+    text-decoration: line-through !important;
+}
+
+.main-container ul > .crossed ~ .crossed{
+    margin: 0 0 10px 0;
+}
+
+.main-container ul > .crossed ~ .crossed:before{
+    display: none;
+}
