@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.5.1/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Atividade EBAC - Bootstrap</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row d-flex justify-content-center align-items-center g-0">
+            <div class="form-container col-sm-12 col-md-8 col-lg-6">
+                <h2 class="h2">Formulário de Cadastro</h2>
+                <form>
+                    <label for="nome" class="form-label icon-label">
+                        <i class="fi fi-br-user"></i>
+                        Nome:
+                    </label>
+                    <input id="nome" type="text" class="form-control" required>
+
+                    <label for="email" class="form-label icon-label">
+                        <i class="fi fi-br-at"></i>
+                        E-mail:
+                    </label>
+                    <input id="email" type="email" class="form-control" required>
+
+                    <label for="tel" class="form-label icon-label">
+                        <i class="fi fi-br-phone-rotary"></i>
+                        Telefone:
+                    </label>
+                    <input id="tel" type="tel" class="form-control" required>
+
+                    <div class="form-check form-switch">
+                        <label for="termos" class="form-check-label">Li e Concordo com os termos de uso.</label>
+                        <input type="checkbox" class="form-check-input" id="termos" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-success">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>
