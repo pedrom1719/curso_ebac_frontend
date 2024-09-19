@@ -34,6 +34,3 @@ exports.default = function(){
     pluginGulp.watch('./src/scripts/*.js', {ignoreInitial: false}, pluginGulp.series(compJS));
     pluginGulp.watch('./src/img/*', {ignoreInitial: false}, pluginGulp.series(compImages));
 }
-
-exports.compilingJS = compJS;
-exports.compilingImages = compImages;
