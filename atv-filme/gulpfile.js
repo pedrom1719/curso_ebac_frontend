@@ -17,11 +17,13 @@ function compJS(){
 
 function compImages(){
     return gulp.src('./src/img/**/*')
-    .pipe(pluginImageMin())
-    .pipe(gulp.dest('dist/img'));
+        .pipe(pluginImageMin())
+        .pipe(gulp.dest('dist/img'));
 }
 
-exports.default = function(){
+exports.default = gulp.parallel(compSass, compJS, compImages);
+
+exports.watch = function(){
     gulp.watch('./src/style/**/*.scss', {ignoreInitial: false}, gulp.series(compSass));
     gulp.watch('./src/js/**/*.js', {ignoreInitial: false}, gulp.series(compJS));
     gulp.watch('./src/img/**/*', {ignoreInitial: false}, gulp.series(compImages));
