@@ -1,0 +1,45 @@
+// Colors
+$bgColor: #08031f;
+$heroColor: #180d49;
+$redColor: #f80e35;
+$yellowColor: #ffc400;
+
+$fontColor--main: #f2f2f2; 
+
+// Fonts
+$mainFont: 'Rubik','Poppins', sans-serif;
+$pixelFont: 'Pixelify Sans', sans-serif;
+
+// Mixins
+@mixin flex-flow($flex-direction: row){
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+// Configs
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    scroll-behavior: smooth;
+
+    font-family: $mainFont;
+    color: $fontColor--main;
+
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body, html{
+    overflow-x: hidden;
+}
+
+// Animations
+@keyframes pressStart{
+    0%, 100%{transform: translateY(0px);}
+    50%{transform: translateY(8px);}
+}

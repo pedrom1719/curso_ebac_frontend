@@ -1,0 +1,128 @@
+@use '_config';
+
+.author__block{
+    @include config.flex-flow();
+
+    background-color: config.$heroColor;
+    
+    margin: -260px 0 0 0;
+    padding: 360px 10px 75px 10px;
+
+    position: relative;
+
+    @media screen and (max-width: 768px) {
+        background-color: transparent;
+
+        text-align: center;
+
+        flex-direction: column;
+
+        margin: 0;
+        padding: 20px 10px;
+    }
+
+    &:before{
+        content: '';
+
+        opacity: 0;
+
+        height: 500px;
+        width: 100%;
+
+        position: absolute;
+
+        top: 0px;
+        transform: translateY(-100%);
+        z-index: -1;
+    }
+
+    &__image{
+        width: 30%;
+
+        @media screen and (max-width: 768px) {
+            width: 100%;
+        }
+
+        img{
+            border-radius: 10px;
+            object-fit: cover;
+
+            width: 100%;
+            height: 300px;
+
+            @media screen and (max-width: 768px) {
+                width: 60%;
+            }
+        }
+    }
+
+    &__content{
+        width: 70%;
+
+        @media screen and (max-width: 768px) {
+            width: 100%;
+
+            padding: 0 20px;
+        }
+
+        &__icon{
+            color: config.$redColor;
+            font-size: 40px;
+
+            display: none;
+            margin: 0 0 15px 0;
+        }
+
+        h2{
+            color: config.$redColor;
+            font-family: config.$pixelFont;
+            font-size: 40px;
+            line-height: 38px;
+
+            @media screen and (max-width: 768px) {
+                margin: 20px 0;
+            }
+            
+            span{
+                color: config.$yellowColor;
+            }
+        }
+
+        p{
+            font-size: 14px;
+
+            margin: 10px 0;
+        }
+
+        ul{
+            @include config.flex-flow();
+            justify-content: flex-start;
+
+            margin: 50px 0 0 0;
+
+            @media screen and (max-width: 768px) {
+                justify-content: center;
+
+                margin: 35px 0 10px 0;
+            }
+
+            li{
+                transition: 0.3s ease-in-out;
+
+                &:hover{
+                    transform: translateY(-3px);
+                }
+
+                i{
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    .block__container{
+        max-width: 700px;
+
+        gap: 40px;
+    }
+}

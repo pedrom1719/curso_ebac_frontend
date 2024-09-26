@@ -1,0 +1,193 @@
+@use '_config';
+
+.origin__block{
+    @include config.flex-flow();
+    border-radius: 10px;
+    background: url('../../dist/img/comic-bg.jpeg'), config.$heroColor;
+    background-blend-mode: screen;
+    background-position: center;
+    background-size: 190%;
+    background-repeat: no-repeat;
+
+    width: auto;
+    max-width: 900px;
+    height: 580px;
+
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    margin: 80px 10px 10px 10px;
+    padding: 30px;
+
+    z-index: 2;
+
+    @media screen and (max-width: 768px) {
+        background-size: 500%;
+
+        width: calc(100% - 20px);
+
+        margin: 30px 0;
+    }
+
+    &__overlay{
+        border-radius: 10px;
+        backdrop-filter: blur(6px);
+        background-color: rgba(0,0,0,0.6);
+
+        width: 100%;
+        height: 100%;
+
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        z-index: 1;
+    }
+
+    &__content{
+        width: 40%;
+    
+        z-index: 4;
+
+        @media screen and (max-width: 768px) {
+            width: 100%;
+        }
+
+        i:first-child{
+            font-size: 40px;
+            color: config.$redColor;
+
+            display: block;
+            margin: 0 0 15px 0;
+        }
+
+        h2{
+            font-size: 40px;
+            line-height: 38px;
+
+            margin: 0 0 10px 0;
+
+            span{
+                color: config.$yellowColor;
+            }
+        }
+
+        p{
+            font-size: 14px;
+
+            max-width: 330px;
+
+            span{
+                font-family: config.$pixelFont;
+                font-size: 16px;
+                font-weight: 600;
+                text-transform: uppercase;
+                color: config.$yellowColor;
+
+                display: block;
+
+                margin: 0 0 10px 0;
+            }
+        }
+
+        &__author{
+            @include config.flex-flow();
+            justify-content: flex-start;
+
+            border: solid 1px config.$yellowColor;
+            border-radius: 50px;
+
+            width: 225px;
+
+            padding: 5px 20px 5px 5px;
+            margin: 40px 0 10px 0;
+
+            img{
+                border-radius: 60px;
+                object-fit: cover;
+
+                width: 35px;
+                height: 35px;
+            }
+
+            h4{
+                @include config.flex-flow(column);
+                align-items: flex-start;
+                gap: 0;
+                
+                strong{
+                    font-family: config.$pixelFont;
+                    font-size: 16px;
+                }
+
+                span{
+                    font-size: 12px;
+                    opacity: 0.5;
+                }
+            }
+        }
+
+        &__shop{
+            @include config.flex-flow();
+            justify-content: space-between;
+
+            background-color: config.$redColor;
+            border-radius: 60px;
+
+            width: 225px;
+
+            padding: 14px 25px 14px 18px;
+
+            transition: 0.3s ease-in-out;
+
+            &:hover{
+                padding: 14px 18px 14px 18px;
+            }
+
+            i{
+                font-size: 16px;
+                line-height: 0;
+
+                margin: 0;
+            }
+
+            span{
+                font-family: config.$pixelFont;
+                font-size: 18px;
+                font-weight: 600;
+                color: config.$fontColor--main;
+            }
+        }
+    }
+
+    &__image{
+        @include config.flex-flow();
+        justify-content: flex-end;
+
+        width: 60%;
+        max-width: 100%;
+
+        z-index: 2;
+
+        @media screen and (max-width: 768px) {
+            width: 100%;
+
+            display: none;
+        }
+
+        img{
+            border-radius: 8px;
+
+            max-height: 830px;
+
+            transform: rotate(-5deg) translateX(20%);
+        }
+    }
+
+    .block__container{
+        max-width: 700px;
+
+        z-index: 3;
+    }
+}
