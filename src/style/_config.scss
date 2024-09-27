@@ -1,0 +1,42 @@
+// Colors
+$bgColor: #f2f2f2;
+$purpleColor: #6a5aff;
+
+$fontColor--main: #333; 
+
+// Fonts
+$mainFont: 'Rubik','Poppins', sans-serif;
+
+// Mixins
+@mixin flex-flow($flex-direction: row){
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+// Configs
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    scroll-behavior: smooth;
+
+    font-family: $mainFont;
+    color: $fontColor--main;
+
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body, html{
+    overflow-x: hidden;
+}
+
+// Animations
+@keyframes jumpingArrow {
+    0%, 100%{transform: translate(-50%, -20px);}
+    50%{transform: translate(-50%, -40px);}
+}

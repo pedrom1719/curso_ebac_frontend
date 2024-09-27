@@ -1,0 +1,151 @@
+@use '_config';
+
+.hero{
+    @include config.flex-flow();
+
+    background: linear-gradient(0deg, rgba(202,90,255,1) 0%, rgba(106,90,255,1) 100%);
+
+    text-align: center;
+
+    height: auto;
+    min-height: 700px;
+    padding: 0 30px;
+
+    position: relative;
+
+    clip-path: ellipse(100% 55% at 48% 44%);
+
+    @media screen and (max-width: 768px){
+        padding: 140px 30px;
+    }
+
+    .main-icon{
+        font-size: 56px;
+
+        @media screen and (max-width: 768px){
+            display: block;
+
+            margin: 0 0 24px 0;
+        }
+    }
+
+    h1{
+        font-size: 48px;
+        text-transform: uppercase;
+        color: #f2f2f2;
+
+        margin: 0 0 -10px 0;
+
+        @media screen and (max-width: 768px){
+            line-height: 45px;
+
+            margin: 0 0 15px 0;
+        }
+    }
+
+    p{
+        font-size: 22px;
+
+        @media screen and (max-width: 768px){
+            padding: 0 20px;
+        }
+    }
+
+    &__counter{
+        width: 100%;
+        max-width: 850px;
+
+        margin: 30px 0;
+
+        ul{
+            @include config.flex-flow();
+
+            @media screen and (max-width: 768px){
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            li{
+                background-color: rgba(255,255,255,0.2);
+                border-radius: 10px;
+
+                padding: 20px;
+                width: 25%;
+
+                @media screen and (max-width: 768px){
+                    width: 48%;
+                }
+
+                span{
+                    color: #f2f2f2;
+
+                    display: block;
+
+                    margin: 0 0 6px 0;
+                }
+
+                strong{
+                    font-size: 72px;
+                    line-height: 60px;
+
+                    display: inline-block;
+
+                    margin: 0 0 -3px 0;
+                }
+            }
+        }
+
+        &__button{
+            background-color: #333;
+            border-radius: 50px;
+            border: none;
+
+            color: #f2f2f2;
+            font-weight: 600;
+            font-size: 24px;
+
+            padding: 10px 30px;
+
+            display: inline-block;
+            transition: 0.3s ease-in-out;
+
+            &:hover{
+                background-color: #fff;
+
+                color: config.$purpleColor;
+
+                padding: 10px 38px;
+            }
+        }
+    }
+
+    b{
+        font-size: 14px;
+        font-weight: 500;
+        color: #f2f2f2;
+
+        @media screen and (max-width: 768px){
+            padding: 0 30px;
+            display: block;
+        }
+    }
+
+    .arrow-anchor{
+        font-size: 40px;
+        color: #f2f2f2;
+
+        position: absolute;
+
+        left: 50%;
+        bottom: 30px;
+        transform: translateX(-50%);
+
+        animation: jumpingArrow 1s infinite ease;
+    }
+
+    .block__container{
+        flex-direction: column;
+
+        margin: -70px 0 0 0;
+    }
+}
