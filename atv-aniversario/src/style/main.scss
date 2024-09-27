@@ -1,0 +1,22 @@
+@use '_config';
+@use '_hero';
+@use '_advantages';
+@use '_skills';
+@use '_footer';
+
+body{
+    background-color: config.$bgColor;
+}
+
+.block__container{
+    @include config.flex-flow();
+
+    max-width: 1024px;
+    width: 100%;
+
+    margin: 0 auto;
+
+    @media screen and (max-width: 768px){
+        display: block;
+    }
+}

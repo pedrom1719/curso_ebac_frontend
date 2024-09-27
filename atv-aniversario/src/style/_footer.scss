@@ -1,0 +1,77 @@
+@use '_config';
+
+.footer{
+    background-color: #333;
+    border-bottom: solid 10px config.$purpleColor;
+
+    padding: 80px 0 70px 0;
+
+    h1{
+        font-size: 40px;
+        text-transform: uppercase;
+        color: #f2f2f2;
+
+        span{
+            color: config.$purpleColor;
+        }
+    }
+
+    p{
+        font-size: 14px;
+        color: #f2f2f2;
+    }
+
+    ul{
+        @include config.flex-flow();
+        gap: 10px;
+
+        margin: 30px 0;
+
+        li{
+
+            a{
+                border: solid 1px #ccc;
+                border-radius: 30px;
+
+                font-size: 14px;
+                color: #ccc;
+
+                padding: 5px 15px;
+
+                opacity: 0.5;
+                transition: 0.3s ease-in-out;
+
+                &:hover{
+                    opacity: 1;
+                    padding: 5px 20px;
+                }
+            }
+        }
+    }
+
+    &__social{
+        @include config.flex-flow();
+        gap: 20px;
+
+        i{
+            font-size: 20px;
+            color: #f2f2f2;
+            display: block;
+
+            transition: 0.3s ease-in-out;
+
+            &:hover{
+                transform: translateY(-5px);
+            }
+        }
+    }
+
+    .block__container{
+        flex-direction: column;
+
+        max-width: 850px;
+        width: 86%;
+
+        text-align: center;
+    }
+}
