@@ -1,0 +1,64 @@
+// Criando classe de objeto "Veiculo"
+class Veiculo{
+    constructor(tipoModel, rodasNum, portasNum, powerOn){
+        this.tipoModel = tipoModel;
+        this.rodasNum = rodasNum;
+        this.portasNum = portasNum;
+        this.powerOn = powerOn
+    }
+
+    acelerarFunction(velocUp){
+        if(typeof velocUp === 'number'){
+            console.log(`vrumvrum! velocidade: ${velocUp} Km/h`);
+        }
+    }
+}
+
+// Nova instancia de Veiculo
+const myVeiculo = new Veiculo('Carro', 4, 2, false);
+console.log(myVeiculo);
+myVeiculo.acelerarFunction(10);
+
+// Criando classe "Carro" que herda da classe Veiculo
+class Carro extends Veiculo{
+    constructor(portasNum, powerOn, nameModel, anoModel, cambioModel){
+        super('Carro', 4, portasNum, powerOn);
+        this.nameModel = nameModel;
+        this.anoModel = anoModel;
+        this.cambioModel = cambioModel;
+    }
+
+    acelerarFunction(velocUp){
+        if(typeof velocUp === 'number'){
+            console.log(`${this.nameModel} faz vrumvrum! velocidade: ${velocUp} Km/h`);
+        }
+    }
+}
+
+// Nova instancia de Carro
+const myCarro = new Carro(2, false,'Celta', 2006, 'Manual');
+console.log(myCarro);
+myCarro.acelerarFunction(20);
+
+// Criando classe "Moto" que herda da classe Veiculo
+class Moto extends Veiculo{
+    constructor(powerOn, nameModel, anoModel, cambioModel, rodaAro){
+        super('Moto', 2, 0, powerOn);
+        this.nameModel = nameModel;
+        this.anoModel = anoModel;
+        this.cambioModel = cambioModel;
+        this.rodaAro = rodaAro;
+    }
+
+    acelerarFunction(velocUp){
+        if(typeof velocUp === 'number'){
+            console.log(`${this.nameModel} faz vrumvrum! velocidade: ${velocUp} Km/h`);
+        }
+    }
+}
+
+// Nova instancia de Moto
+const myMoto = new Moto(false,'Kawasaki', 2010, 'Marcha', 17);
+console.log(myMoto);
+myMoto.acelerarFunction(15);
+
