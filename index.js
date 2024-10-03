@@ -14,11 +14,6 @@ class Veiculo{
     }
 }
 
-// Nova instancia de Veiculo
-const myVeiculo = new Veiculo('Carro', 4, 2, false);
-console.log(myVeiculo);
-myVeiculo.acelerarFunction(10);
-
 // Criando classe "Carro" que herda da classe Veiculo
 class Carro extends Veiculo{
     constructor(portasNum, powerOn, nameModel, anoModel, cambioModel){
@@ -34,16 +29,6 @@ class Carro extends Veiculo{
         }
     }
 }
-
-// Primeira instancia de Carro
-const myCarro_01 = new Carro(2, false,'Celta', 2006, 'Manual');
-console.log(myCarro_01);
-myCarro.acelerarFunction(20);
-
-// Segunda instancia de Carro
-const myCarro_02 = new Carro(4, true,'Corsa', 2012, 'Automatico');
-console.log(myCarro_02);
-myCarro.acelerarFunction(25);
 
 // Criando classe "Moto" que herda da classe Veiculo
 class Moto extends Veiculo{
@@ -62,8 +47,17 @@ class Moto extends Veiculo{
     }
 }
 
-// Nova instancia de Moto
+// Primeira instancia de Carro
+const myCarro_01 = new Carro(2, false,'Celta', 2006, 'Manual');
+console.log(myCarro_01);
+myCarro_01.acelerarFunction(20);
+
+// Segunda instancia de Carro
+const myCarro_02 = new Carro(4, true,'Corsa', 2012, 'Automatico');
+console.log(myCarro_02);
+myCarro_02.acelerarFunction(25);
+
+// Primeira instancia de Moto
 const myMoto = new Moto(false,'Kawasaki', 2010, 'Marcha', 17);
 console.log(myMoto);
 myMoto.acelerarFunction(15);
-
