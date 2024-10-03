@@ -35,10 +35,15 @@ class Carro extends Veiculo{
     }
 }
 
-// Nova instancia de Carro
-const myCarro = new Carro(2, false,'Celta', 2006, 'Manual');
-console.log(myCarro);
+// Primeira instancia de Carro
+const myCarro_01 = new Carro(2, false,'Celta', 2006, 'Manual');
+console.log(myCarro_01);
 myCarro.acelerarFunction(20);
+
+// Segunda instancia de Carro
+const myCarro_02 = new Carro(4, true,'Corsa', 2012, 'Automatico');
+console.log(myCarro_02);
+myCarro.acelerarFunction(25);
 
 // Criando classe "Moto" que herda da classe Veiculo
 class Moto extends Veiculo{
